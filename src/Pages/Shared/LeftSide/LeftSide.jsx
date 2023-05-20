@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const LeftSide = () => {
     const [categories, setCategories] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/categories')
+        fetch('https://the-dragon-news-server-tariquzzamantapon.vercel.app/categories')
             .then(res => res.json())
             .then(data => setCategories(data))
     }, [])

@@ -29,12 +29,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Categorey></Categorey>,
-        loader: () => fetch('http://localhost:5000/news')
+        loader: () => fetch('https://the-dragon-news-server-tariquzzamantapon.vercel.app/news')
       },
       {
         path: "/categorey/:id",
         element: <Categorey></Categorey>,
-        loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.id}`)
+        loader: ({ params }) => fetch(`https://the-dragon-news-server-tariquzzamantapon.vercel.app/categories/${params.id}`)
       },
       {
         path: "/login",
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
       {
         path: "/news/:id",
         element: <PrivateRoute><News></News></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/news/${params.id}`)
+        loader: ({ params }) => fetch(`https://the-dragon-news-server-tariquzzamantapon.vercel.app/news/${params.id}`)
       }
     ]
   }
